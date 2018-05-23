@@ -13,7 +13,7 @@ template '/var/www/html/index.html' do
   owner 'root'
   variables(
    :motd => "this is the message mate!",
-   :hostname => "#{node[:opsworks][:ec2][:hostname]}"
+   :hostname => "{node[:opsworks][:instance][:hostname]}"
 )
 end
 
