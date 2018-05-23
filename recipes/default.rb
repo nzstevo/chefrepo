@@ -7,7 +7,7 @@
 
 package 'apache2'
 
-instance = search("aws_opswords_instance", "self:true").first
+instance = search("aws_opsworks_instance", "self:true").first
 
 template '/var/www/html/index.html' do
   source 'index.html.erb'
