@@ -8,7 +8,6 @@
 package 'apache2'
 
 instance = search("aws_opswords_instance", "self:true").first
-hostname1 = #{instance['hostname']}
 
 template '/var/www/html/index.html' do
   source 'index.html.erb'
@@ -16,7 +15,7 @@ template '/var/www/html/index.html' do
   owner 'root'
   variables(
    :motd => "this is the message mate!",
-   :hostname => hostname1
+   :hostname => "#{instance[:hostname]}"
 
 )
 end
