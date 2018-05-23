@@ -17,6 +17,6 @@ template '/var/www/html/index.html' do
 )
 end
 
-service "httpd" do
+service "apache2" do
   action :restart
 end
